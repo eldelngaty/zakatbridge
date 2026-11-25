@@ -1,0 +1,25 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+tmp/
+
+# Dependencies (not used today, but just in case)
+node_modules/
+
+# Environment files — never commit secrets
+.env
+.env.*
+
+# Archives
+*.zip

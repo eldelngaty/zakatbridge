@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Content Security Policy: only allow resources from this site.
+    No inline scripts, no third-party scripts, no external requests.
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="ZakatBridge is an open-source prototype exploring how Egyptian communities in Canada and the United States could support families in Egypt through Zakat and Sadaqah, with transparency and dignity.">
+  <meta name="theme-color" content="#0f5132">
+  <title>ZakatBridge — Open Source Humanitarian Platform</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5132'/%3E%3Cpath d='M12 42 Q32 14 52 42' stroke='%23d4af37' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Crect x='10' y='42' width='44' height='6' rx='3' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <!-- Prototype notice: always visible so no visitor mistakes this for a live charity -->
+  <div class="prototype-banner" role="note">
+    <strong data-i18n="banner.title">Prototype notice:</strong>
+    <span data-i18n="banner.text">ZakatBridge is an early-stage open-source prototype, not an operating charity. All cases and figures are fictional demonstration data. No real donations are collected.</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="ZakatBridge home">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="currentColor"/>
+          <path d="M12 42 Q32 14 52 42" stroke="#d4af37" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <rect x="10" y="42" width="44" height="6" rx="3" fill="#ffffff"/>
+        </svg>
+        <span class="brand-name">ZakatBridge</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#categories" data-i18n="nav.categories">Zakat &amp; Sadaqah</a></li>
+          <li><a href="#cases" data-i18n="nav.cases">Cases</a></li>
+          <li><a href="#donate" data-i18n="nav.donate">Donate (Demo)</a></li>
+          <li><a href="#dashboard" data-i18n="nav.dashboard">Transparency</a></li>
+          <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#contribute" data-i18n="nav.contribute">Contribute</a></li>
+        </ul>
+      </nav>
+
+      <button id="lang-toggle" class="lang-toggle" type="button" lang="ar" aria-label="التبديل إلى العربية">العربية</button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Open Source · Nonprofit-Oriented · Transparent</p>
+        <h1 data-i18n="hero.title">Building a bridge of trust between Egyptians abroad and families in need at home</h1>
+        <p class="lead" data-i18n="hero.lead">ZakatBridge is a community-built prototype exploring how Egyptian communities in Canada and the United States could direct Zakat and Sadaqah to underprivileged families in Egypt — with transparency, accountability, and dignity at its core.</p>
+        <div class="hero-actions">
+          <a href="#cases" class="btn btn-gold" data-i18n="hero.cta1">Explore Example Cases</a>
+          <a href="#contribute" class="btn btn-outline-light" data-i18n="hero.cta2">Help Build ZakatBridge</a>
+        </div>
+        <ul class="hero-values">
+          <li data-i18n="hero.v1">Transparency</li>
+          <li data-i18n="hero.v2">Accountability</li>
+          <li data-i18n="hero.v3">Accessibility</li>
+          <li data-i18n="hero.v4">Dignity</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CATEGORIES ===================== -->
+    <section id="categories" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="cat.title">Two Ways to Give</h2>
+        <p class="section-intro" data-i18n="cat.intro">Zakat and Sadaqah are kept strictly separate so that every contribution reaches a purpose that matches its intention.</p>
+        <div class="grid grid-2">
+          <article class="card category-card category-zakat">
+            <span class="badge badge-zakat" data-i18n="label.zakat">Zakat</span>
+            <h3 data-i18n="cat.zakat.title">Zakat — An Obligation</h3>
+            <p data-i18n="cat.zakat.text">An obligatory annual contribution (usually 2.5% of qualifying wealth held for one lunar year above the nisab). Zakat may only go to eligible recipients described in the Qur'an (9:60), such as the poor and the needy.</p>
+            <ul class="check-list">
+              <li data-i18n="cat.zakat.p1">Separate tracking from all other funds</li>
+              <li data-i18n="cat.zakat.p2">Only for verified eligible recipients</li>
+              <li data-i18n="cat.zakat.p3">Built-in calculator to estimate what is due</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-filter-jump="zakat" data-i18n="cat.zakat.btn">View Zakat Cases</button>
+          </article>
+          <article class="card category-card category-sadaqah">
+            <span class="badge badge-sadaqah" data-i18n="label.sadaqah">Sadaqah</span>
+            <h3 data-i18n="cat.sadaqah.title">Sadaqah — Voluntary Charity</h3>
+            <p data-i18n="cat.sadaqah.text">Voluntary giving of any amount, at any time, for a broad range of good causes — including education, clean water, and community projects that may not qualify for Zakat.</p>
+            <ul class="check-list">
+              <li data-i18n="cat.sadaqah.p1">Any amount, any time</li>
+              <li data-i18n="cat.sadaqah.p2">Wider range of community projects</li>
+              <li data-i18n="cat.sadaqah.p3">Ongoing charity (Sadaqah Jariyah) projects</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-filter-jump="sadaqah" data-i18n="cat.sadaqah.btn">View Sadaqah Cases</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CASES ===================== -->
+    <section id="cases" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="cases.title">Example Humanitarian Cases</h2>
+        <p class="demo-label" role="note" data-i18n="cases.demo">Fictional demonstration data — these cases do not describe real people.</p>
+        <p class="section-intro" data-i18n="cases.intro">In a future version, each case would be verified by a trusted partner on the ground. Beneficiaries would be identified only by anonymous codes to protect their privacy and dignity.</p>
+
+        <div class="filters" role="group" aria-label="Filter cases" data-i18n-aria="cases.filterLabel">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true" data-i18n="cases.all">All</button>
+          <button type="button" class="filter-btn" data-filter="zakat" aria-pressed="false" data-i18n="label.zakat">Zakat</button>
+          <button type="button" class="filter-btn" data-filter="sadaqah" aria-pressed="false" data-i18n="label.sadaqah">Sadaqah</button>
+        </div>
+
+        <div id="case-list" class="grid grid-3" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================== DONATION (SIMULATED) ===================== -->
+    <section id="donate" class="section">
+      <div class="container narrow">
+        <h2 class="section-title" data-i18n="donate.title">Simulated Donation</h2>
+        <p class="demo-label" role="note" data-i18n="donate.demo">Simulation only — no money is collected, no payment details are requested, and nothing leaves your browser.</p>
+
+        <form id="donation-form" class="card form" novalidate>
+          <fieldset>
+            <legend data-i18n="donate.type">Type of giving</legend>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" name="category" value="zakat" checked>
+                <span data-i18n="label.zakat">Zakat</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="category" value="sadaqah">
+                <span data-i18n="label.sadaqah">Sadaqah</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="donation-case" data-i18n="donate.case">Example case</label>
+            <select id="donation-case" name="case" required></select>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="donation-amount" data-i18n="donate.amount">Amount</label>
+              <input id="donation-amount" name="amount" type="number" inputmode="decimal" min="1" max="100000" step="1" required aria-describedby="amount-hint amount-error">
+              <small id="amount-hint" class="hint" data-i18n="donate.amountHint">Between 1 and 100,000.</small>
+            </div>
+            <div class="field">
+              <label for="donation-currency" data-i18n="donate.currency">Currency</label>
+              <select id="donation-currency" name="currency">
+                <option value="CAD">CAD</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+          <p id="amount-error" class="error" role="alert" hidden></p>
+
+          <label class="checkbox">
+            <input type="checkbox" id="donation-ack" name="ack" required>
+            <span data-i18n="donate.ack">I understand this is a demonstration and no real donation will be made.</span>
+          </label>
+          <p id="ack-error" class="error" role="alert" hidden></p>
+
+          <button type="submit" class="btn btn-gold btn-block" data-i18n="donate.submit">Simulate Donation</button>
+        </form>
+
+        <div id="donation-result" class="card result" role="status" aria-live="polite" hidden></div>
+      </div>
+    </section>
+
+    <!-- ===================== TRANSPARENCY DASHBOARD ===================== -->
+    <section id="dashboard" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="dash.title">Transparency Dashboard</h2>
+        <p class="demo-label" role="note" data-i18n="dash.demo">Demonstration statistics — calculated only from the fictional cases above plus simulated donations made in this browser tab. These are not real impact figures.</p>
+
+        <div class="stats grid grid-4">
+          <div class="stat card">
+            <span class="stat-value" id="stat-cases">0</span>
+            <span class="stat-label" data-i18n="dash.cases">Example cases</span>
+          </div>
+          <div class="stat card">
+            <span class="stat-value" id="stat-goal">0</span>
+            <span class="stat-label" data-i18n="dash.goal">Total demo goal (CAD)</span>
+          </div>
+          <div class="stat card">
+            <span class="stat-value" id="stat-raised">0</span>
+            <span class="stat-label" data-i18n="dash.raised">Demo amount pledged (CAD)</span>
+          </div>
+          <div class="stat card">
+            <span class="stat-value" id="stat-sim">0</span>
+            <span class="stat-label" data-i18n="dash.sim">Your simulated donations (this tab)</span>
+          </div>
+        </div>
+
+        <div class="grid grid-2 dash-panels">
+          <div class="card">
+            <h3 data-i18n="dash.byCategory">Pledged by category (demo)</h3>
+            <div id="chart-category" class="bar-chart"></div>
+          </div>
+          <div class="card">
+            <h3 data-i18n="dash.principles">How transparency would work</h3>
+            <ul class="check-list">
+              <li data-i18n="dash.p1">Zakat and Sadaqah tracked in separate ledgers</li>
+              <li data-i18n="dash.p2">Each case shows its goal, progress, and verifying partner</li>
+              <li data-i18n="dash.p3">Public reports of funds received and delivered</li>
+              <li data-i18n="dash.p4">Administrative costs disclosed openly</li>
+              <li data-i18n="dash.p5">Open-source code that anyone can audit</li>
+            </ul>
+          </div>
+        </div>
+        <p class="hint" data-i18n="dash.rate">Demo conversion for display: 1 USD ≈ 1.35 CAD (fixed illustrative rate, not live).</p>
+      </div>
+    </section>
+
+    <!-- ===================== ZAKAT CALCULATOR ===================== -->
+    <section id="calculator" class="section">
+      <div class="container narrow">
+        <h2 class="section-title" data-i18n="calc.title">Simple Zakat Calculator</h2>
+        <p class="section-intro" data-i18n="calc.intro">Estimate your Zakat at 2.5% of net qualifying wealth held for one lunar year. Enter today's gold or silver price yourself — this tool does not fetch live prices.</p>
+
+        <form id="zakat-form" class="card form" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="calc-currency" data-i18n="calc.currency">Currency</label>
+              <select id="calc-currency">
+                <option value="CAD">CAD</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="calc-nisab-basis" data-i18n="calc.basis">Nisab basis</label>
+              <select id="calc-nisab-basis">
+                <option value="silver" data-i18n="calc.silver">Silver (595 g)</option>
+                <option value="gold" data-i18n="calc.gold">Gold (85 g)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="calc-metal-price" data-i18n="calc.price">Price per gram of the chosen metal</label>
+            <input id="calc-metal-price" type="number" min="0" step="0.01" inputmode="decimal" required>
+          </div>
+
+          <h3 class="form-subtitle" data-i18n="calc.assets">Assets</h3>
+          <div class="field-row">
+            <div class="field">
+              <label for="calc-cash" data-i18n="calc.cash">Cash &amp; bank balances</label>
+              <input id="calc-cash" class="calc-asset" type="number" min="0" step="0.01" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="calc-goldsilver" data-i18n="calc.goldsilver">Value of gold &amp; silver owned</label>
+              <input id="calc-goldsilver" class="calc-asset" type="number" min="0" step="0.01" inputmode="decimal">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="calc-investments" data-i18n="calc.investments">Investments &amp; shares</label>
+              <input id="calc-investments" class="calc-asset" type="number" min="0" step="0.01" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="calc-business" data-i18n="calc.business">Business inventory &amp; money owed to you</label>
+              <input id="calc-business" class="calc-asset" type="number" min="0" step="0.01" inputmode="decimal">
+            </div>
+          </div>
+
+          <h3 class="form-subtitle" data-i18n="calc.liabilities">Liabilities</h3>
+          <div class="field">
+            <label for="calc-debts" data-i18n="calc.debts">Debts and bills due now</label>
+            <input id="calc-debts" type="number" min="0" step="0.01" inputmode="decimal">
+          </div>
+
+          <p id="calc-error" class="error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="calc.submit">Calculate</button>
+        </form>
+
+        <div id="calc-result" class="card result" role="status" aria-live="polite" hidden></div>
+        <p class="hint disclaimer" data-i18n="calc.disclaimer">This is a simplified educational estimate. Rules vary between scholars and personal circumstances — please consult a qualified scholar for your own situation.</p>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT & MISSION ===================== -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about.title">About Us &amp; Our Mission</h2>
+        <div class="grid grid-2">
+          <div>
+            <p data-i18n="about.p1">ZakatBridge began as an idea: many Egyptians living in Canada and the United States want to support families back home, but finding trustworthy, transparent channels is difficult.</p>
+            <p data-i18n="about.p2">This project is an open-source prototype exploring what such a channel could look like. It is not a registered charity, does not hold funds, and has no partner organizations at this stage.</p>
+            <p data-i18n="about.p3">Any future operational version would need to work through properly registered nonprofits in Canada, the United States, and Egypt, and comply with all applicable laws.</p>
+          </div>
+          <div class="values-grid">
+            <div class="value card">
+              <h3 data-i18n="about.v1t">Transparency</h3>
+              <p data-i18n="about.v1">Open code, open processes, and clear reporting.</p>
+            </div>
+            <div class="value card">
+              <h3 data-i18n="about.v2t">Accountability</h3>
+              <p data-i18n="about.v2">Every contribution traceable from giver to recipient.</p>
+            </div>
+            <div class="value card">
+              <h3 data-i18n="about.v3t">Accessibility</h3>
+              <p data-i18n="about.v3">Bilingual, mobile-friendly, and usable by everyone.</p>
+            </div>
+            <div class="value card">
+              <h3 data-i18n="about.v4t">Dignity</h3>
+              <p data-i18n="about.v4">Beneficiaries are never exposed, shamed, or exploited.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTRIBUTE ===================== -->
+    <section id="contribute" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contrib.title">Volunteers &amp; Open-Source Contributors Wanted</h2>
+        <p class="section-intro" data-i18n="contrib.intro">ZakatBridge is at the very beginning. We are looking for people who want to help shape it — no contribution is too small.</p>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 data-i18n="contrib.devT">Developers &amp; Designers</h3>
+            <p data-i18n="contrib.dev">Improve the code, accessibility, design, and testing. Good first issues are a great place to start.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="contrib.transT">Translators &amp; Writers</h3>
+            <p data-i18n="contrib.trans">Help improve Arabic and English content, documentation, and plain-language explanations.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="contrib.advT">Advisors</h3>
+            <p data-i18n="contrib.adv">Islamic finance scholars, nonprofit, legal, and compliance experts who can guide responsible growth.</p>
+          </div>
+        </div>
+        <div class="contribute-cta">
+          <p data-i18n="contrib.how">Read CONTRIBUTING.md in the project repository, open an issue, or submit a pull request.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>ZakatBridge</strong> — <span data-i18n="footer.tag">Open Source Humanitarian Platform (prototype)</span></p>
+      <p data-i18n="footer.disclaimer">Not a registered charity. No real donations are accepted. All data shown is fictional and for demonstration only.</p>
+      <p data-i18n="footer.license">Released under the MIT License.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
